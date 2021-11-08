@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- This template was made by Colorlib (https://colorlib.com) -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Random password generator</title>
+
+    <!-- Font Icon -->
+    <link
+      rel="stylesheet"
+      href="fonts/material-icon/css/material-design-iconic-font.min.css"
+    />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <!-- Sign up form -->
+      <section class="signup">
+        <div class="container">
+          <div class="signup-content">
+            <div class="signup-form">
+              <h2 class="form-title">Password generator</h2>
+              <form method="POST" class="register-form" id="register-form">
+                <div class="form-group">
+                  <!--<i class="zmdi zmdi-lock-outline"></i
+                  >-->
+                  <label for="name"><i class="zmdi zmdi-lock"></i></label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="How many characters would you like?"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="checkbox"
+                    name="symbols"
+                    id="symbols"
+                    class="agree-term"
+                  />
+                  <label for="symbols" class="label-agree-term"
+                    ><span><span></span></span>Would you like some special
+                    characters?
+                  </label>
+                  <input
+                    type="checkbox"
+                    name="numbers"
+                    id="numbers"
+                    class="agree-term"
+                  />
+                  <label for="numbers" class="label-agree-term"
+                    ><span><span></span></span>Would you like some numbers?
+                  </label>
+                </div>
+                <div class="form-group form-button">
+                  <input
+                    type="submit"
+                    name="signup"
+                    id="signup"
+                    class="form-submit"
+                    value="Generate"
+                  />
+                  <input
+                    type="submit"
+                    name="copy"
+                    id="copy"
+                    class="form-submit"
+                    value="Copy"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="name2"
+                    ><i class="zmdi zmdi-lock-outline"></i
+                  ></label>
+                  <input
+                    type="text"
+                    name="name2"
+                    id="name2"
+                    placeholder="Your generated password will appear here."
+                  />
+                </div>
+                <div id="password-strength"><span></span></div>
+                <p id="password-feedback"></p>
+              </form>
+            </div>
+            <div class="signup-image">
+              <figure>
+                <img src="images/chair.jpg" alt="sing up image" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JS -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
